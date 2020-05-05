@@ -1,7 +1,8 @@
+#byxussof Make it available for mac and other linux distros
 - name: Installing binnaries
   become: true
   get_url:
-    url: https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip
+    url: "https://releases.hashicorp.com/terraform/{{ software_version }}/terraform_{{ software_version }}_linux_amd64.zip"
     dest: /usr/local/bin/
 #  with_items: "{{ software_packages }}"
 
@@ -10,7 +11,7 @@
 - name: Extract binnaries
   become: true
   unarchive:
-    src: /usr/local/bin/terraform_0.11.14_linux_amd64.zip
+    src: "/usr/local/bin/terraform_{{ software_version }}_linux_amd64.zip"
     dest: /usr/local/bin/
 #    mode:
 
