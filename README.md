@@ -32,7 +32,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: servers
       roles:
-         - { role: xussof.software_terraform }
+         - { role: software_terraform }
 
 License
 -------
@@ -41,4 +41,4 @@ BSD
 
 Author Information
 ------------------
-Made by @xussof
+Made by @sergi-canas
